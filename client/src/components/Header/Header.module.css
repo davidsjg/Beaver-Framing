@@ -1,0 +1,20 @@
+.leftHeader img {
+  height: 90px;
+}
+
+.centerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .centerHeader {
+    display: none;
+  }
+}
+
+.rightMenu a {
+  margin: 0 5px;
+}
