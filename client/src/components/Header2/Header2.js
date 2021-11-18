@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
-import styles from "./Header.module.css";
+import styles from "./Header2.module.css";
 
 import { useSelector } from "react-redux";
 
-function Header() {
+function Header2() {
   const [burgerStatus, setBurgerStatus] = useState(false);
 
   return (
@@ -14,13 +14,18 @@ function Header() {
       <div className={styles["leftHeader"]}>
         <img src="/images/beaver.jpeg" alt="" />
       </div>
-
-      <div className={styles["centerHeader"]}>BEAVER FRAMING</div>
-
+      <div className={styles["centerHeader"]}>
+        <h2>Beaver Framing</h2>
+      </div>
       <div className={styles["rightHeader"]}>
         <NavMenu>
           <a>
-            <span>Home</span> <span>Log In</span>
+            <span>Home</span>
+          </a>
+        </NavMenu>
+        <NavMenu>
+          <a>
+            <span>Log In</span>
           </a>
         </NavMenu>
         <CustomMenu onClick={() => setBurgerStatus(true)} />
@@ -44,15 +49,60 @@ function Header() {
         </li>
       </BurgerNav>
     </Container>
+
+    // <Container>
+    //   <div className={styles["leftHeader"]}>
+    //     <img src="/images/beaver.jpeg" alt="" />
+    //   </div>
+
+    //   <div className={styles["centerHeader"]}>BEAVER FRAMING</div>
+
+    //   <div className={styles["rightHeader"]}>
+    //     <NavMenu>
+    //       <a>
+    //         <span>Home</span> <span>Log In</span>
+    //       </a>
+    //     </NavMenu>
+    //     <CustomMenu onClick={() => setBurgerStatus(true)} />
+    //   </div>
+
+    //   <BurgerNav show={burgerStatus}>
+    //     <CloseWrapper>
+    //       <CustomClose onClick={() => setBurgerStatus(false)} />
+    //     </CloseWrapper>
+    //     <li>
+    //       <a>Frame It</a>
+    //     </li>
+    //     <li>
+    //       <a>Upload Image</a>
+    //     </li>
+    //     <li>
+    //       <a>How It Works</a>
+    //     </li>
+    //     <li>
+    //       <a>Testimonials</a>
+    //     </li>
+    //   </BurgerNav>
+    // </Container>
   );
 }
 
-export default Header;
+export default Header2;
+
+const Container = styled.div`
+  display: flex;
+  margin-top: 30px;
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+`;
+
+const HeaderSection = styled.div``;
 
 const NavMenu = styled.div`
   display: flex;
   flex: 1;
-  margin-left: 25px;
+
   a {
     display: flex;
     align-items: center;
@@ -70,7 +120,7 @@ const NavMenu = styled.div`
       &:after {
         content: "";
         height: 2px;
-        background: white;
+        background: black;
         position: absolute;
         left: 0;
         right: 0;
@@ -91,18 +141,18 @@ const NavMenu = styled.div`
   }
 `;
 
-const Container = styled.div`
-  min-height: 60px;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  top: 0;
-  left 0;
-  right: 0;
-z-index: 1;
-`;
+// const Container = styled.div`
+//   min-height: 60px;
+//   position: fixed;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   padding: 0 20px;
+//   top: 0;
+//   left 0;
+//   right: 0;
+// z-index: 1;
+// `;
 
 const CustomMenu = styled(MenuIcon)`
   cursor: pointer;
