@@ -1,0 +1,7 @@
+.mainContain {
+  min-height: calc(100vh - 120px);
+  background-image: url("../../images/frames1.jpeg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
