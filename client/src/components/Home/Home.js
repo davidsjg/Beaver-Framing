@@ -83,7 +83,7 @@ function Home() {
 export default Home;
 
 const Container = styled.div`
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 140px);
   background-image: ${(props) => `url("/images/${props.bgImage}")`};
   background-position: top;
   background-repeat: no-repeat;
@@ -95,11 +95,12 @@ const Container = styled.div`
   align-items: baseline;
   grid-gap: 45px;
   transition: 250ms;
+  border-radius: 2px;
 `;
 
 const Wrap = styled.div`
-  margin-top: 200px;
-  border: 3px solid lightsteelblue;
+  margin-top: 10px;
+  border: 1px solid black;
   cursor: pointer;
   border-radius: 10px;
   box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,

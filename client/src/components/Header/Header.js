@@ -6,30 +6,53 @@ import styles from "./Header.module.css";
 
 import { useSelector } from "react-redux";
 
-function Header() {
+function Header2() {
   const [burgerStatus, setBurgerStatus] = useState(false);
 
   return (
-    <Container>
+    <div className={styles["mainContain"]}>
       <div className={styles["leftHeader"]}>
         <img src="/images/beaver.jpeg" alt="" />
       </div>
 
-      <div className={styles["centerHeader"]}>BEAVER FRAMING</div>
+      <div className={styles["centerHeader"]}>
+        <h2>Beaver Framing</h2>
+      </div>
 
       <div className={styles["rightHeader"]}>
-        <NavMenu>
+        <div className={styles["navMenu"]}>
           <a>
-            <span>Home</span> <span>Log In</span>
+            <span style={{ marginRight: -9 }}>Home</span>
           </a>
-        </NavMenu>
-        <CustomMenu onClick={() => setBurgerStatus(true)} />
+        </div>
+        <div className={styles["navMenu"]}>
+          <a>
+            <span
+            // style={{ paddingRight: 15 }}
+            >
+              Log In
+            </span>
+          </a>
+        </div>
+        <div
+          className={styles["customMenu"]}
+          onClick={() => setBurgerStatus(true)}
+        >
+          <MenuIcon />
+        </div>
       </div>
 
       <BurgerNav show={burgerStatus}>
-        <CloseWrapper>
-          <CustomClose onClick={() => setBurgerStatus(false)} />
-        </CloseWrapper>
+        {/* <CloseWrapper></CloseWrapper> */}
+        <div className={styles["closeWrapper"]}>
+          {" "}
+          <div
+            className={styles["customClose"]}
+            onClick={() => setBurgerStatus(false)}
+          >
+            <CloseIcon />
+          </div>
+        </div>
         <li>
           <a>Frame It</a>
         </li>
@@ -43,70 +66,11 @@ function Header() {
           <a>Testimonials</a>
         </li>
       </BurgerNav>
-    </Container>
+    </div>
   );
 }
 
-export default Header;
-
-const NavMenu = styled.div`
-  display: flex;
-  flex: 1;
-  margin-left: 25px;
-  a {
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
-    cursor: pointer;
-    img {
-      height: 20px;
-      padding-right: 5px;
-    }
-    span {
-      font-size: 13px;
-      letter-spacing: 1.42px;
-      position: relative;
-
-      &:after {
-        content: "";
-        height: 2px;
-        background: white;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -6px;
-        opacity: 0;
-        transform-origin: center;
-        transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-        transform: scaleX(0);
-      }
-    }
-
-    &:hover {
-      span:after {
-        transform: scaleX(1);
-        opacity: 1;
-      }
-    }
-  }
-`;
-
-const Container = styled.div`
-  min-height: 60px;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  top: 0;
-  left 0;
-  right: 0;
-z-index: 1;
-`;
-
-const CustomMenu = styled(MenuIcon)`
-  cursor: pointer;
-`;
+export default Header2;
 
 const BurgerNav = styled.div`
   position: fixed;
@@ -131,13 +95,4 @@ const BurgerNav = styled.div`
       font-weight: 600;
     }
   }
-`;
-
-const CustomClose = styled(CloseIcon)`
-  cursor: pointer;
-`;
-
-const CloseWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end;
 `;
