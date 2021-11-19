@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Home.module.css";
 import Image from "../../images/frames1.jpeg";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 function Home() {
   //   let tempBack = "frame1";
@@ -14,21 +15,23 @@ function Home() {
     <div>
       {/* <div className={styles[`${tempBack}`]}></div> */}
       <Container bgImage={tempBack}>
-        <div className={styles["myWrap"]}>
-          <p>Frame it UP</p>
-        </div>
-        <div className={styles["myWrap"]}>
-          <p>How it Works</p>
-        </div>
-        <div className={styles["myWrap"]}>
-          <p>Upload Image</p>
-        </div>
-        <div className={styles["myWrap"]}>
-          <p>Custom Frames</p>
-        </div>
-        <div className={styles["myWrap"]}>
-          <p>Gift Ideas</p>
-        </div>
+        <Fade side>
+          <div className={styles["myWrap"]}>
+            <p>Frame it UP</p>
+          </div>
+          <div className={styles["myWrap"]}>
+            <p>How it Works</p>
+          </div>
+          <div className={styles["myWrap"]}>
+            <p>Upload Image</p>
+          </div>
+          <div className={styles["myWrap"]}>
+            <p>Custom Frames</p>
+          </div>
+          <div className={styles["myWrap"]}>
+            <p>Gift Ideas</p>
+          </div>
+        </Fade>
       </Container>
     </div>
   );
@@ -46,6 +49,6 @@ const Container = styled.div`
   grid-template: repeat(5, minmax(0, 1fr));
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   grid-gap: 25px;
 `;
