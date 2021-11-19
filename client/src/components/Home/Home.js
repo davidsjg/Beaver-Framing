@@ -6,7 +6,7 @@ import styled from "styled-components";
 function Home() {
   //   let tempBack = "frame1";
 
-  const [tempBack, setTempBack] = useState("frames.jpeg");
+  const [tempBack, setTempBack] = useState("frames1.jpeg");
 
   useEffect(() => {}, []);
 
