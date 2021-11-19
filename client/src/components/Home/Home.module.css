@@ -1,6 +1,33 @@
-.mainContain {
+.frame1 {
+  min-height: calc(100vh - 120px);
+  background-image: url("../../images/frames.jpeg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 3000ms;
+  /* transition-duration: 0; */
+}
+
+.frame2 {
   min-height: calc(100vh - 120px);
   background-image: url("../../images/frames1.jpeg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 250ms;
+}
+
+.frame3 {
+  min-height: calc(100vh - 120px);
+  background-image: url("../../images/frames8.jpeg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.frame4 {
+  min-height: calc(100vh - 120px);
+  background-image: url("../../images/frames9.jpeg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
