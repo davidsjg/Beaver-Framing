@@ -1,38 +1,38 @@
-.frame1 {
+/* .frame1 {
   min-height: calc(100vh - 120px);
   background-image: url("../../images/frames.jpeg");
 
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 3000ms;
-  /* transition-duration: 0; */
-}
 
-.frame2 {
+} */
+
+/* .frame2 {
   min-height: calc(100vh - 120px);
   background-image: url("../../images/frames1.jpeg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 250ms;
-}
-
+} */
+/* 
 .frame3 {
   min-height: calc(100vh - 120px);
   background-image: url("../../images/frames8.jpeg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
-.frame4 {
+/* .frame4 {
   min-height: calc(100vh - 120px);
   background-image: url("../../images/frames9.jpeg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
+} */
+/* 
 .myWrap {
   border: 2px solid rgba(249, 249, 249, 0.1);
   cursor: pointer;
@@ -48,18 +48,27 @@
 .myWrap:hover {
   box-shadow: rgb(0 0 0 / 80%) 0px 26px 30px -10px,
     rgb(0 0 0 / 72%) 0px 16px 10px -10px;
-  transform: scale(1.05);
+  transform: scale(2);
   border-color: black;
-  background-color: white;
-
-  opacity: 1;
+  background-color: cornsilk;
 }
 
 .myWrap p {
   font-weight: 900;
+  padding: 0 100px;
 }
 
 .contain {
   justify-content: center;
   align-items: baseline;
+}
+
+.frame1 {
+  /* background-image: url("../../images/testpic.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; */
+
+.frame1:hover {
+  /* transform: scale(2); */
 }
