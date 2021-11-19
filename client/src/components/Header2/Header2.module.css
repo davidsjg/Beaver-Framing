@@ -73,6 +73,7 @@
 }
 .customMenu {
   cursor: pointer;
+  padding-top: 6px;
 }
 
 .customClose {
