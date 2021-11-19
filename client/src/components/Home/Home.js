@@ -4,8 +4,6 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
 function Home() {
-  //   let tempBack = "frame1";
-
   const [tempBack, setTempBack] = useState("frames.jpeg");
 
   useEffect(() => {}, []);
