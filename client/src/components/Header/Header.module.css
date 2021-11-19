@@ -1,6 +1,6 @@
 .mainContain {
   display: grid;
-  height: 100px;
+  height: 95px;
   grid-gap: 25px;
   grid-template-columns: 1fr 1fr 1fr;
   box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
@@ -12,6 +12,7 @@
 
 .leftHeader img {
   height: 90px;
+  margin-top: 5px;
 }
 
 .centerHeader {
@@ -34,6 +35,7 @@
   justify-content: right;
   /* cursor: pointer; */
   letter-spacing: 1.12px;
+  margin-right: 5px;
 }
 
 .rightHeader span {

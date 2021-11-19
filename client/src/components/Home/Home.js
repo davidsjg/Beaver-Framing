@@ -83,7 +83,7 @@ function Home() {
 export default Home;
 
 const Container = styled.div`
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 135px);
   background-image: ${(props) => `url("/images/${props.bgImage}")`};
   background-position: top;
   background-repeat: no-repeat;
