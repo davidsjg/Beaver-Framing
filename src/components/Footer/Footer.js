@@ -17,15 +17,18 @@ function Footer() {
         <Item2>
           <img src="/images/beaver.jpeg" alt="" />
           <span>
-            <i class="fab fa-instagram fa-2x"></i>
-            <i class="fab fa-facebook fa-2x"></i>
-            <i class="fab fa-linkedin-in fa-2x"></i>
+            <i className="fab fa-instagram fa-2x"></i>
+            <i className="fab fa-facebook fa-2x"></i>
+            <i className="fab fa-linkedin-in fa-2x"></i>
           </span>
         </Item2>
         <Item3>
           <h3>Want News?</h3>
           <p>Join the newsletter. We don't spam.</p>
-          <input></input>
+          <span>
+            <input className="email" placeholder="email@email.com"></input>
+            <button>Frame me up!</button>
+          </span>
         </Item3>
         <Item>Sup</Item>
         <Item>Sup</Item>
@@ -62,6 +65,7 @@ const Item1 = styled.div`
 
   p {
     text-align: center;
+    margin: 10px;
   }
 `;
 
@@ -77,13 +81,13 @@ const Item2 = styled.div`
 
     i {
       margin: 0 10px;
-      margin-bottom: 8px;
+      margin-bottom: 15px;
     }
   }
 
   img {
-    height: 150px;
-    width: 120px;
+    height: 180px;
+    width: 140px;
   }
 `;
 
@@ -99,6 +103,27 @@ const Item3 = styled.div`
   }
   p {
     margin-top: 5px;
+  }
+
+  span {
+    display: flex;
+    flex-direction: column;
+    // border: 3px solid black;
+
+    input {
+      border: 1px solid cornflowerblue;
+      broder: 0px;
+      text-align: center;
+
+      height: 30px;
+    }
+
+    button {
+      border: 1px solid cornflowerblue;
+      background-color: cornflowerblue;
+      height: 40px;
+      width: 200px;
+    }
   }
 `;
 const Item = styled.div`

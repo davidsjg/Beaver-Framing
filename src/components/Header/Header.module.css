@@ -13,6 +13,7 @@
 .leftHeader img {
   height: 90px;
   margin-top: 5px;
+  display: flex;
 }
 
 .centerHeader {
